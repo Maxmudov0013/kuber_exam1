@@ -1,0 +1,5 @@
+kubectl apply -f  frontend-app.yaml
+kubectl get deployment -n exam-maxmudov -owide
+NAME           READY   UP-TO-DATE   AVAILABLE   AGE   CONTAINERS   IMAGES                    SELECTOR
+flask-exam     1/1     1            1           20m   flask-exam   nvrbckdown/flask-app      app=flask-exam
+frontend-app   1/1     1            1           84s   something    nvrbckdown/something:v1   app=frontend-app

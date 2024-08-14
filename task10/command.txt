@@ -1,0 +1,5 @@
+kubectl -n exam-maxmudov apply -f info.yaml
+kubectl -n exam-maxmudov get configMap -owide
+NAME               DATA   AGE
+info               3      96s
+kube-root-ca.crt   1      62m

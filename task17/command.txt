@@ -1,0 +1,6 @@
+kubectl -n exam-maxmudov get endpoints -oyaml | grep ip
+    - ip: 10.233.74.86
+    - ip: 10.233.74.93
+    - ip: 10.233.71.38
+    - ip: 10.233.75.35
+    - ip: 10.233.75.79

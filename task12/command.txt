@@ -1,0 +1,10 @@
+kubectl -n exam-maxmudov apply -f  deployment_key.yaml
+NAME           READY   UP-TO-DATE   AVAILABLE   AGE
+flask-exam     1/1     1            1           81m
+frontend-app   1/1     1            1           62m
+myexam         0/1     1            0           2m47s
+kubectl get deployment -n exam-maxmudov -owide
+NAME           READY   UP-TO-DATE   AVAILABLE   AGE     CONTAINERS   IMAGES                        SELECTOR
+flask-exam     1/1     1            1           109m    flask-exam   nvrbckdown/flask-app          app=flask-exam
+frontend-app   1/1     1            1           90m     something    nvrbckdown/something:v1       app=frontend-app
+myexam         1/1     1            1           2m26s   myexam       maxmudovk8s/uacademy:repo-1   app=myexam

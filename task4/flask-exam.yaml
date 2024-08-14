@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flask-exam
+  namespace: exam-maxmudov
+spec:
+  selector:
+    matchLabels:
+      app: flask-exam
+  template:
+    metadata:
+      labels:
+        app: flask-exam
+    spec:
+      containers:
+      - name: flask-exam
+        image: nvrbckdown/flask-app
+        ports:
+        - containerPort: 5000

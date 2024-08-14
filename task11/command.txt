@@ -1,0 +1,4 @@
+kubectl apply -f myexam.yaml
+kubectl -n exam-maxmudov get secret -owide
+NAME     TYPE     DATA   AGE
+myexam   Opaque   2      67s

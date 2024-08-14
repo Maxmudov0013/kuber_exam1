@@ -1,0 +1,1 @@
+kubectl -n exam-maxmudov create cronjob ping-cron --image=busybox --schedule='*/2 * * * *' -- ping -c 4 8.8.8.8

@@ -1,0 +1,6 @@
+kubectl apply -f service_flaskapp_exam.yaml
+kubectl get svc -n exam-maxmudov -owide
+NAME         TYPE       CLUSTER-IP      EXTERNAL-IP   PORT(S)        AGE     SELECTOR
+flask-exam   NodePort   10.233.30.161   <none>        80:30033/TCP   2m50s   app=flask-exam
+curl 65.109.137.203:30033
+{"env":"staging","http_port":"80","string":"Welcome to DevOps Course!"}

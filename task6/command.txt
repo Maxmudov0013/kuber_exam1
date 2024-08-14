@@ -1,0 +1,8 @@
+kubectl  get pod -n exam-maxmudov -owide
+NAME                          READY   STATUS    RESTARTS   AGE   IP             NODE    NOMINATED NODE   READINESS GATES
+flask-exam-6b957b5f6d-wcscr   1/1     Running   0          12m   10.233.74.86   node4   <none>           <none>
+nginx1                        1/1     Running   0          29m   10.233.74.95   node4   <none>           <none>
+nginx2                        1/1     Running   0          28m   10.233.71.58   node3   <none>           <none>
+kubectl -n exam-maxmudov exec -it nginx1 bash
+root@nginx1:/# curl 10.233.74.86:5000
+{env:staging,http_port:80,string:Welcome to DevOps Course!}

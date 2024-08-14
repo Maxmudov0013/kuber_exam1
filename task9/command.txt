@@ -1,0 +1,8 @@
+kubectl apply -f  frontend_app_service.yaml
+kubectl get svc -n exam-maxmudov -owide
+NAME                   TYPE       CLUSTER-IP      EXTERNAL-IP   PORT(S)        AGE   SELECTOR
+flask-exam             NodePort   10.233.30.161   <none>        80:30033/TCP   23m   app=flask-exam
+frontend-app-service   NodePort   10.233.40.59    <none>        80:30036/TCP   32s   app=frontend-app
+
+curl 65.109.137.203:30036
+{message:Welcome to your Kubernetes Exam!}

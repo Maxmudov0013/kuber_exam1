@@ -1,0 +1,19 @@
+kubectl create namespace exam-maxmudov
+kubectl get namespaces | grep axam-maxmudov
+NAME                    STATUS   AGE
+a-yusupov               Active   3h40m
+default                 Active   12d
+exam-adxamov            Active   17m
+exam-azizbek            Active   12m
+exam-davron             Active   24m
+exam-dilshod-xolmatov   Active   23m
+exam-kodirovr           Active   29m
+exam-maxmudov           Active   2m12s
+exam-ravshan            Active   8m8s
+exam-xotam              Active   10m
+f-nabiyev               Active   5h45m
+ingress-nginx           Active   12d
+kube-node-lease         Active   12d
+kube-public             Active   12d
+kube-system             Active   12d
+practice-xotam          Active   23m

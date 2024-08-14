@@ -1,0 +1,7 @@
+kubectl apply -f nginx_pods.yaml
+cp nginx_pods.yaml nginx2_pods.yaml
+kubectl apply -f nginx2_pods.yaml
+kubectl get pod -n exam-maxmudov -owide
+NAME     READY   STATUS    RESTARTS   AGE     IP             NODE    NOMINATED NODE   READINESS GATES
+nginx1   1/1     Running   0          3m51s   10.233.74.95   node4   <none>           <none>
+nginx2   1/1     Running   0          2m59s   10.233.71.58   node3   <none>           <none>

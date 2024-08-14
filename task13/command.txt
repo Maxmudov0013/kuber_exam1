@@ -1,0 +1,6 @@
+kubectl expose deployment myexam --port 80 --target-port 80 -n exam-maxmudov
+kubectl get svc -n exam-maxmudov -owide
+NAME                   TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)        AGE    SELECTOR
+flask-exam             NodePort    10.233.30.161   <none>        80:30033/TCP   108m   app=flask-exam
+frontend-app-service   NodePort    10.233.40.59    <none>        80:30036/TCP   85m    app=frontend-app
+myexam                 ClusterIP   10.233.32.173   <none>        80/TCP         68s    app=myexam

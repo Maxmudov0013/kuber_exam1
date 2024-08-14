@@ -1,0 +1,2 @@
+curl http://amahmudov.nvrbckdown.uz/load-capability
+{cpus:1,memorys:64000000}

@@ -1,0 +1,5 @@
+kubectl -n exam-maxmudov get endpoints
+NAME                   ENDPOINTS                                         AGE
+flask-exam             10.233.74.86:5000                                 123m
+frontend-app-service   10.233.74.93:80                                   99m
+myexam                 10.233.71.38:80,10.233.75.35:80,10.233.75.79:80   15m

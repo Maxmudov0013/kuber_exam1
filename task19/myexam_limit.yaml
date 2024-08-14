@@ -1,0 +1,52 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: myexam
+  name: myexam-app
+  namespace: exam-maxmudov
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: myexam-app
+  template:
+    metadata:
+      labels:
+        app: myexam-app
+    spec:
+      containers:
+      - image: maxmudovk8s/uacademy:repo-1
+        name: myexam-app
+        resources:
+          requests:
+            cpu: 100m
+            memory: 64M
+          limits:
+            cpu: 200m
+            memory: 128Mi
+        env:
+        - name: CPU
+          valueFrom:
+            resourceFieldRef:
+              containerName: myexam-app
+              resource: requests.cpu
+        - name: MEMORY
+          valueFrom:
+            resourceFieldRef:
+              containerName: myexam-app
+              resource: requests.memory
+        - name: LOG_LEVEL
+          valueFrom:
+            configMapKeyRef:
+              name: info
+              key: log_leveI
+        - name: GRPC_PORT
+          valueFrom:
+            configMapKeyRef:
+              name: info
+              key: grpc_port
+        - name: POD_IP
+          valueFrom:
+            fieldRef:
+              fieldPath: status.podIP

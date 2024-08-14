@@ -1,0 +1,6 @@
+kubectl apply -f  ingres_myexam.yaml
+kubectl get ing -n exam-maxmudov
+NAME     CLASS   HOSTS                     ADDRESS         PORTS   AGE
+myexam   nginx   amahmudov.nvrbckdown.uz   10.233.52.106   80      82s
+curl amahmudov.nvrbckdown.uz
+{message:Welcome to your Kubernetes Exam!}
